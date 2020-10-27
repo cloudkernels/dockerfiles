@@ -1,0 +1,3 @@
+Dockerfile to build and extract apache binaries from source.
+A pathing issue may occur as the ./configure step hardcodes the directores/paths defined in the image filesystem in the final artifact.
+Make step is done with LDFLAGS="-static" to prevent libgc incompatibilities
