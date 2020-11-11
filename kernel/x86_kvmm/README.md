@@ -9,5 +9,5 @@ then:
 ```DOCKER_BUILDKIT=1 docker build -t get_bzimage -f Dockerfile --build-arg "TOKEN=$TOKEN" --output type=local,dest=./output .```
 
 
-Builds latest version from Linus's tree and uses the custom kvmm config instead of menuconfig to avoid UI interaction in docker.
+Builds 5.7 version from Linus's tree and uses the custom kvmm config instead of menuconfig to avoid UI interaction in docker.
 Compiles with nproc threads in parallel.
