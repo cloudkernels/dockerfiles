@@ -1,0 +1,23 @@
+From b3b33eb13f1e10d95234b73558b9acfe1e0a0465 Mon Sep 17 00:00:00 2001
+From: Demetres Alexandres <demetresalx@gmail.com>
+Date: Wed, 18 Nov 2020 17:55:53 +0000
+Subject: [PATCH] ftp mirror no longer hanging
+
+---
+ pcre/Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pcre/Makefile b/pcre/Makefile
+index ce6337a..302f143 100644
+--- a/pcre/Makefile
++++ b/pcre/Makefile
+@@ -1,5 +1,5 @@
+ include ../Makefile.inc
+-UPSTREAM=ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.40.tar.gz
++UPSTREAM=https://ftp.pcre.org/pub/pcre/pcre-8.40.tar.gz
+ TARBALL=$(notdir $(UPSTREAM))
+ 
+ all: bin/pcre
+-- 
+2.11.0
+
