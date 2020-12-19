@@ -1,0 +1,23 @@
+name: Docker Image CI
+#?????
+on:
+  push:
+    branches: [ test_actions ]
+  #pull_request:
+    #branches: [ main ]
+
+jobs:
+
+  build-redis:
+    runs-on: x86_64
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build ./apps/redis/ --file ./apps/redis/Dockerfile --tag redis-x86:$(date +%s)
+
+  build-nginx:
+    runs-on: x86_64
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build ./apps/nginx/ --file ./apps/nginx/Dockerfile --tag nginx-x86:$(date +%s)
