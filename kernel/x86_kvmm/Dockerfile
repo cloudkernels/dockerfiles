@@ -6,8 +6,8 @@ RUN apt-get -y update && apt -y install git
 RUN git clone https://${TOKEN}:x-oauth-basic@github.com/cloudkernels/kvmm
 WORKDIR /kvmm
 #copy the two patches from build context
-COPY linux-patches/0001-KVMM-export-needed-symbols.patch /
-COPY linux-patches/0002-KVMM-Memory-and-interface-related-changes.patch /
+RUN cp linux-patches/0001-KVMM-export-needed-symbols.patch /
+RUN cp linux-patches/0002-KVMM-Memory-and-interface-related-changes.patch /
 #grab 5.7 kernel from Linus's tree to apply patches
 RUN git clone https://github.com/torvalds/linux -b v5.7 --depth 1
 WORKDIR /linux/
