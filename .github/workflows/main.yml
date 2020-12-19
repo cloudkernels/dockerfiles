@@ -23,7 +23,6 @@ jobs:
         name:  cloudkernels/kvmm
         username: ${{ secrets.NBFC_REG_USER }}
         password: ${{ secrets.NBFC_REG_PASSWD }}
-        workdir: kernel/x86_kvmm
         context: kernel/x86_kvmm
         registry: registry.nubificus.co.uk
         buildargs: TOKEN=${{ secrets.NBFC_BUILDER_TOKEN }}
